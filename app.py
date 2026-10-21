@@ -58,19 +58,55 @@ if "active_page" not in st.session_state:
 is_landing = (st.session_state.get("active_page") == "Welcome" or not st.session_state.get("has_entered", False))
 
 if is_landing:
-    # Minimalist, distraction-free front page layout
+    # Full 4-sided true viewport centering for minimalist front entrance
     st.markdown("""
     <style>
     [data-testid="stSidebar"],
     [data-testid="stSidebarCollapsedControl"] {
         display: none !important;
     }
+    
+    html, body, [data-testid="stAppViewContainer"], section[data-testid="stMain"] {
+        height: 100% !important;
+        min-height: 100vh !important;
+    }
+    
+    [data-testid="stMain"] {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        min-height: 100vh !important;
+        height: 100vh !important;
+        overflow-y: auto !important;
+    }
+    
+    div[data-testid="stAppViewContainer"] section.main .block-container,
+    section[data-testid="stMain"] .block-container,
     .block-container,
     [data-testid="stMainBlockContainer"],
     .stMainBlockContainer {
-        max-width: 860px !important;
-        padding-top: 2rem !important;
-        margin: 0 auto !important;
+        max-width: 900px !important;
+        width: 100% !important;
+        margin: auto !important;
+        padding: 0 1.5rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        min-height: 86vh !important;
+        height: 86vh !important;
+    }
+
+    div[data-testid="stAppViewContainer"] section.main .block-container > div,
+    section[data-testid="stMain"] .block-container > div,
+    .block-container > div {
+        margin: auto !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
     </style>
     """, unsafe_allow_html=True)

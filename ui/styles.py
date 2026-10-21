@@ -646,51 +646,56 @@ div[data-testid="stDataFrame"] {{
     }}
 }}
 
+h1.ld-landing-title,
 .ld-landing-title {{
-    font-size: clamp(2.8rem, 6vw, 4.2rem);
-    font-weight: 750;
-    letter-spacing: -0.035em;
-    color: var(--text-primary);
-    margin: 0 0 16px 0 !important;
+    font-size: 3.8rem !important;
+    font-weight: 850 !important;
+    letter-spacing: -0.04em !important;
+    color: var(--text-primary) !important;
+    margin: 0 0 18px 0 !important;
     padding: 0 !important;
-    line-height: 1.15;
+    line-height: 1.15 !important;
+    text-align: center !important;
 }}
 
+p.ld-landing-subline,
 .ld-landing-subline {{
-    font-size: clamp(1.1rem, 2.2vw, 1.3rem);
-    color: var(--text-secondary);
-    max-width: 620px;
-    margin: 0 auto;
-    line-height: 1.6;
-    font-weight: 400;
+    font-size: 1.4rem !important;
+    color: var(--text-secondary) !important;
+    max-width: 700px !important;
+    margin: 0 auto 38px auto !important;
+    line-height: 1.6 !important;
+    font-weight: 400 !important;
+    text-align: center !important;
 }}
 
 .ld-landing-footer {{
     text-align: center;
-    margin-top: 48px;
-    font-size: 12px;
-    letter-spacing: 0.05em;
+    margin-top: 38px;
+    font-size: 13.5px;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--text-secondary);
     opacity: 0.75;
+    font-weight: 500;
 }}
 
 /* Continue CTA Button Styling */
 .st-key-landing_continue_btn button,
 div.st-key-landing_continue_btn button {{
-    padding: 13px 32px !important;
-    font-size: 16px !important;
-    font-weight: 600 !important;
-    border-radius: 8px !important;
+    padding: 18px 52px !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    border-radius: 12px !important;
     letter-spacing: -0.01em !important;
-    box-shadow: 0 4px 14px rgba(73, 107, 80, 0.25) !important;
+    box-shadow: 0 6px 22px rgba(73, 107, 80, 0.3) !important;
     transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }}
 
 .st-key-landing_continue_btn button:hover,
 div.st-key-landing_continue_btn button:hover {{
     transform: translateY(-2px) !important;
-    box-shadow: 0 6px 20px rgba(73, 107, 80, 0.35) !important;
+    box-shadow: 0 8px 28px rgba(73, 107, 80, 0.4) !important;
 }}
 
 /* Sidebar Landing Return Button */
