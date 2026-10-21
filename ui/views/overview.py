@@ -6,7 +6,7 @@ from core.db import get_activity_history, get_total_documents_summarized
 from core.duplicates import find_duplicates
 from core.llm_service import LLMService
 from core.scanner import scan_directory, get_scanned_files
-from ui.components import render_top_header, render_metric_card, render_html
+from ui.components import render_top_header, render_metric_card, render_html, navigate_to
 
 def render_overview_view():
     """Render the primary Overview presentation dashboard and guided tour."""
@@ -57,10 +57,7 @@ def render_overview_view():
             </div>
             """)
             if st.button("Launch Organizer →", key="tour_btn_organizer", use_container_width=True):
-                st.session_state["main_navigation_radio"] = "File Organizer"
-                st.session_state["active_page"] = "File Organizer"
-                st.query_params["page"] = "File Organizer"
-                st.rerun()
+                navigate_to("File Organizer")
 
     with tour_col2:
         with st.container(border=True):
@@ -73,10 +70,7 @@ def render_overview_view():
             </div>
             """)
             if st.button("Open Document Reader →", key="tour_btn_doc", use_container_width=True):
-                st.session_state["main_navigation_radio"] = "Document Intelligence"
-                st.session_state["active_page"] = "Document Intelligence"
-                st.query_params["page"] = "Document Intelligence"
-                st.rerun()
+                navigate_to("Document Intelligence")
 
     with tour_col3:
         with st.container(border=True):
@@ -89,10 +83,7 @@ def render_overview_view():
             </div>
             """)
             if st.button("Inspect Duplicates →", key="tour_btn_dup", use_container_width=True):
-                st.session_state["main_navigation_radio"] = "Duplicates"
-                st.session_state["active_page"] = "Duplicates"
-                st.query_params["page"] = "Duplicates"
-                st.rerun()
+                navigate_to("Duplicates")
 
     st.markdown("<div style='height: 10px;'></div>", unsafe_allow_html=True)
 
@@ -182,10 +173,7 @@ def render_overview_view():
             """)
 
             if st.button("Review All Suggestions in Organizer →", key="review_pending_btn", use_container_width=True):
-                st.session_state["main_navigation_radio"] = "File Organizer"
-                st.session_state["active_page"] = "File Organizer"
-                st.query_params["page"] = "File Organizer"
-                st.rerun()
+                navigate_to("File Organizer")
         else:
             with st.container(border=True):
                 render_html("""
@@ -232,10 +220,7 @@ def render_overview_view():
             """)
 
             if st.button("Configure Engine in Settings →", key="overview_settings_btn", use_container_width=True):
-                st.session_state["main_navigation_radio"] = "Settings"
-                st.session_state["active_page"] = "Settings"
-                st.query_params["page"] = "Settings"
-                st.rerun()
+                navigate_to("Settings")
 
     # 6. Recent Activity Section
     st.markdown("<div style='height: 12px;'></div>", unsafe_allow_html=True)

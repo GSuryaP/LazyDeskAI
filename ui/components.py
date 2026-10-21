@@ -15,6 +15,13 @@ def render_html(html_str: str):
     """Safely render HTML directly via st.html without markdown code block interference."""
     st.html(html_str)
 
+def navigate_to(page_name: str):
+    """Safely request programmatic navigation before the radio widget is instantiated."""
+    st.session_state["pending_nav_target"] = page_name
+    st.session_state["active_page"] = page_name
+    st.query_params["page"] = page_name
+    st.rerun()
+
 def init_session_theme():
     """Initialize theme from URL query param, database setting, or session state."""
     # 1. Check query parameters
@@ -54,10 +61,20 @@ def render_sidebar_shell(active_page: str) -> str:
             "Settings"
         ]
 
-        # Check query param for direct navigation
+        # 1. Consume pending programmatic navigation BEFORE creating widget
+        if "pending_nav_target" in st.session_state:
+            target = st.session_state.pop("pending_nav_target")
+            if target in nav_options:
+                st.session_state["main_navigation_radio"] = target
+                st.session_state["active_page"] = target
+                st.query_params["page"] = target
+
+        # 2. Check query param for direct navigation
         query_page = st.query_params.get("page")
-        if query_page in nav_options and "main_navigation_radio" not in st.session_state:
-            st.session_state["main_navigation_radio"] = query_page
+        if query_page in nav_options:
+            if "main_navigation_radio" not in st.session_state or st.session_state.get("active_page") != query_page:
+                st.session_state["main_navigation_radio"] = query_page
+                st.session_state["active_page"] = query_page
 
         if "main_navigation_radio" in st.session_state and st.session_state["main_navigation_radio"] in nav_options:
             current_idx = nav_options.index(st.session_state["main_navigation_radio"])
@@ -71,6 +88,7 @@ def render_sidebar_shell(active_page: str) -> str:
             label_visibility="collapsed",
             key="main_navigation_radio"
         )
+        st.session_state["active_page"] = selected_nav
         st.query_params["page"] = selected_nav
 
         st.markdown("<div style='height: 24px;'></div>", unsafe_allow_html=True)
