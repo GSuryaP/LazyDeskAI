@@ -85,8 +85,9 @@ That is the true spirit of International Sloth Day: **Do the smart work once, an
 
 ## 🔗 Links & Code
 
-- **GitHub Repository**: [https://github.com/your-username/LazyDeskAI](https://github.com/your-username/LazyDeskAI)
+- **GitHub Repository**: [https://github.com/GSuryaP/LazyDeskAI](https://github.com/GSuryaP/LazyDeskAI)
 - **License**: MIT
-- **Category Targeted**: **Best Use of Gemma** ($200 USD) & Overall Week 3 Winner.
+- **Primary Category**: **Best Use of Gemma ($200 USD)**
+- **Secondary Target**: Overall Week 3 Winner ($250 USD)
 
 *Built with Google Gemma 2, Streamlit, and Python for the Hacktoberfest 2026 Open-Source AI Challenge.*
