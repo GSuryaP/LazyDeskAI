@@ -148,9 +148,8 @@ def render_top_header(title: str, description: str):
         with theme_col:
             toggle_label = "☀️ Light Theme" if is_dark else "🌙 Dark Theme"
             next_theme = "light" if is_dark else "dark"
-            tooltip_msg = f"Switch to {next_theme.title()} theme"
 
-            if st.button(toggle_label, key="theme_toggle_btn", help=tooltip_msg, use_container_width=True):
+            if st.button(toggle_label, key="theme_toggle_btn", use_container_width=True):
                 st.session_state["theme"] = next_theme
                 set_setting("theme", next_theme)
                 st.query_params["theme"] = next_theme

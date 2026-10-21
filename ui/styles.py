@@ -145,8 +145,11 @@ p, span, label, div {{
     color: var(--text-primary);
 }}
 
-/* Buttons Styling */
-div.stButton > button {{
+/* Buttons Styling - Comprehensive Coverage */
+div.stButton button,
+div.stButton > button,
+button[data-testid="baseButton-secondary"],
+div[data-testid="stTooltipHoverTarget"] button {{
     font-family: var(--font-sans) !important;
     font-size: 13.5px !important;
     font-weight: 500 !important;
@@ -164,23 +167,110 @@ div.stButton > button {{
     justify-content: center !important;
 }}
 
-div.stButton > button:hover {{
+/* Ensure button text and nested spans inherit the correct theme color */
+div.stButton button *,
+div.stButton > button *,
+div[data-testid="stTooltipHoverTarget"] button * {{
+    color: var(--text-primary) !important;
+}}
+
+div.stButton button:hover,
+div.stButton > button:hover,
+div[data-testid="stTooltipHoverTarget"] button:hover {{
     border-color: var(--accent-primary) !important;
     color: var(--accent-primary) !important;
     background-color: var(--surface-secondary) !important;
 }}
 
+div.stButton button:hover *,
+div.stButton > button:hover *,
+div[data-testid="stTooltipHoverTarget"] button:hover * {{
+    color: var(--accent-primary) !important;
+}}
+
+div.stButton button:active,
 div.stButton > button:active {{
     transform: translateY(1px);
 }}
 
+/* Dedicated Theme Toggle Button Styling */
+.st-key-theme_toggle_btn button,
+div.st-key-theme_toggle_btn button {{
+    background-color: var(--surface-primary) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 20px !important;
+    padding: 7px 18px !important;
+    font-weight: 500 !important;
+    font-size: 13.5px !important;
+    box-shadow: var(--card-shadow) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}}
+
+.st-key-theme_toggle_btn button *,
+.st-key-theme_toggle_btn button p,
+.st-key-theme_toggle_btn button span {{
+    color: var(--text-primary) !important;
+}}
+
+.st-key-theme_toggle_btn button:hover,
+div.st-key-theme_toggle_btn button:hover {{
+    border-color: var(--accent-primary) !important;
+    background-color: var(--surface-secondary) !important;
+    color: var(--accent-primary) !important;
+}}
+
+.st-key-theme_toggle_btn button:hover *,
+.st-key-theme_toggle_btn button:hover p,
+.st-key-theme_toggle_btn button:hover span {{
+    color: var(--accent-primary) !important;
+}}
+
 /* Primary Buttons */
+div.stButton button[kind="primary"],
 div.stButton > button[kind="primary"],
-div.stButton > button[data-testid="baseButton-primary"] {{
+button[data-testid="baseButton-primary"] {{
     background-color: var(--accent-primary) !important;
     color: var(--btn-text-primary) !important;
     border: 1px solid var(--accent-primary) !important;
     font-weight: 600 !important;
+}}
+
+div.stButton button[kind="primary"] *,
+button[data-testid="baseButton-primary"] * {{
+    color: var(--btn-text-primary) !important;
+}}
+
+div.stButton button[kind="primary"]:hover,
+button[data-testid="baseButton-primary"]:hover {{
+    background-color: var(--accent-hover) !important;
+    border-color: var(--accent-hover) !important;
+    color: var(--btn-text-primary) !important;
+}}
+
+div.stButton button[kind="primary"]:hover *,
+button[data-testid="baseButton-primary"]:hover * {{
+    color: var(--btn-text-primary) !important;
+}}
+
+/* Tooltips */
+div[data-baseweb="tooltip"],
+div[data-testid="stTooltipContent"],
+div[role="tooltip"] {{
+    background-color: var(--surface-secondary) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 6px !important;
+    font-size: 12px !important;
+    box-shadow: var(--card-shadow) !important;
+}}
+
+div[data-baseweb="tooltip"] *,
+div[data-testid="stTooltipContent"] *,
+div[role="tooltip"] * {{
+    color: var(--text-primary) !important;
 }}
 
 div.stButton > button[kind="primary"]:hover,
