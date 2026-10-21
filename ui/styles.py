@@ -195,7 +195,9 @@ div.stButton > button:active {{
 
 /* Dedicated Theme Toggle Button Styling */
 .st-key-theme_toggle_btn button,
-div.st-key-theme_toggle_btn button {{
+div.st-key-theme_toggle_btn button,
+.st-key-landing_theme_toggle_btn button,
+div.st-key-landing_theme_toggle_btn button {{
     background-color: var(--surface-primary) !important;
     color: var(--text-primary) !important;
     border: 1px solid var(--border) !important;
@@ -211,12 +213,17 @@ div.st-key-theme_toggle_btn button {{
 
 .st-key-theme_toggle_btn button *,
 .st-key-theme_toggle_btn button p,
-.st-key-theme_toggle_btn button span {{
+.st-key-theme_toggle_btn button span,
+.st-key-landing_theme_toggle_btn button *,
+.st-key-landing_theme_toggle_btn button p,
+.st-key-landing_theme_toggle_btn button span {{
     color: var(--text-primary) !important;
 }}
 
 .st-key-theme_toggle_btn button:hover,
-div.st-key-theme_toggle_btn button:hover {{
+div.st-key-theme_toggle_btn button:hover,
+.st-key-landing_theme_toggle_btn button:hover,
+div.st-key-landing_theme_toggle_btn button:hover {{
     border-color: var(--accent-primary) !important;
     background-color: var(--surface-secondary) !important;
     color: var(--accent-primary) !important;
@@ -224,7 +231,10 @@ div.st-key-theme_toggle_btn button:hover {{
 
 .st-key-theme_toggle_btn button:hover *,
 .st-key-theme_toggle_btn button:hover p,
-.st-key-theme_toggle_btn button:hover span {{
+.st-key-theme_toggle_btn button:hover span,
+.st-key-landing_theme_toggle_btn button:hover *,
+.st-key-landing_theme_toggle_btn button:hover p,
+.st-key-landing_theme_toggle_btn button:hover span {{
     color: var(--accent-primary) !important;
 }}
 
@@ -603,6 +613,115 @@ div[data-testid="stDataFrame"] {{
     font-size: 11px;
     color: var(--text-secondary);
     letter-spacing: 0.02em;
+}}
+
+/* ==========================================================================
+   Minimalist Landing / Front Page Styles
+   ========================================================================== */
+.ld-landing-wrapper {{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}}
+
+.ld-landing-icon {{
+    font-size: 68px;
+    line-height: 1;
+    margin-bottom: 20px;
+    display: inline-block;
+    filter: drop-shadow(0 6px 16px rgba(73, 107, 80, 0.22));
+    animation: ld-float 3.5s ease-in-out infinite;
+}}
+
+@keyframes ld-float {{
+    0%, 100% {{
+        transform: translateY(0px) rotate(0deg);
+    }}
+    50% {{
+        transform: translateY(-8px) rotate(-1.5deg);
+    }}
+}}
+
+.ld-landing-title {{
+    font-size: clamp(2.8rem, 6vw, 4.2rem);
+    font-weight: 750;
+    letter-spacing: -0.035em;
+    color: var(--text-primary);
+    margin: 0 0 16px 0 !important;
+    padding: 0 !important;
+    line-height: 1.15;
+}}
+
+.ld-landing-subline {{
+    font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+    color: var(--text-secondary);
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 400;
+}}
+
+.ld-landing-footer {{
+    text-align: center;
+    margin-top: 48px;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    opacity: 0.75;
+}}
+
+/* Continue CTA Button Styling */
+.st-key-landing_continue_btn button,
+div.st-key-landing_continue_btn button {{
+    padding: 13px 32px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    letter-spacing: -0.01em !important;
+    box-shadow: 0 4px 14px rgba(73, 107, 80, 0.25) !important;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}}
+
+.st-key-landing_continue_btn button:hover,
+div.st-key-landing_continue_btn button:hover {{
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(73, 107, 80, 0.35) !important;
+}}
+
+/* Sidebar Landing Return Button */
+.st-key-sidebar_landing_return_btn button,
+div.st-key-sidebar_landing_return_btn button {{
+    background-color: var(--surface-primary) !important;
+    border: 1px solid var(--border) !important;
+    color: var(--text-secondary) !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    padding: 6px 12px !important;
+    border-radius: 6px !important;
+    margin-bottom: 4px !important;
+    transition: all 0.15s ease !important;
+}}
+
+.st-key-sidebar_landing_return_btn button *,
+div.st-key-sidebar_landing_return_btn button * {{
+    color: var(--text-secondary) !important;
+}}
+
+.st-key-sidebar_landing_return_btn button:hover,
+div.st-key-sidebar_landing_return_btn button:hover {{
+    border-color: var(--accent-primary) !important;
+    color: var(--accent-primary) !important;
+    background-color: var(--accent-soft) !important;
+}}
+
+.st-key-sidebar_landing_return_btn button:hover *,
+div.st-key-sidebar_landing_return_btn button:hover * {{
+    color: var(--accent-primary) !important;
 }}
 
 /* Custom Scrollbars */

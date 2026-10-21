@@ -51,6 +51,15 @@ def render_sidebar_shell(active_page: str) -> str:
         </div>
         """)
 
+        # Quick link to Front Landing Page
+        if st.button("← Front Landing Page", key="sidebar_landing_return_btn", use_container_width=True):
+            st.session_state["has_entered"] = False
+            st.session_state["active_page"] = "Welcome"
+            st.query_params["page"] = "Welcome"
+            st.rerun()
+
+        st.markdown("<div style='height: 8px;'></div>", unsafe_allow_html=True)
+
         # Navigation Menu
         nav_options = [
             "Overview",
