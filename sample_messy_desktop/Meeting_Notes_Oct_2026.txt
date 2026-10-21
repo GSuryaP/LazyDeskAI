@@ -1,0 +1,11 @@
+Weekly Engineering Standup - October 2026
+Attendees: Design Lead, Frontend Engineer, AI Systems Architect.
+
+Summary:
+We reviewed the Warm Paper and Forest Graphite theme implementation.
+The team agreed on minimal borders, calm contrast, and zero neon accents.
+
+Todos:
+- Need to verify contrast ratio on table headers.
+- Ensure undo preserves physical folder paths on disk.
+- Next review date: 2026-10-25.

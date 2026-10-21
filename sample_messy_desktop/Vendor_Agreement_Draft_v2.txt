@@ -1,0 +1,10 @@
+CONFIDENTIAL SERVICE AGREEMENT
+
+This Service Agreement is entered into between CoreWorks LLC and Client Partner.
+The vendor shall provide cloud and edge deployment support starting on 2026-11-01.
+
+Deliverables and Obligations:
+- Must submit monthly compliance reports on the 1st of each month.
+- TODO: Sign master NDAs with all subcontracted engineers.
+- Action required: Confirm billing reconciliation schedule before 2026-11-12.
+- Final audit scheduled for 2026-12-20.
