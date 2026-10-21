@@ -32,7 +32,7 @@ def render_overview_view():
         <div style="font-size: 1.45rem; font-weight: 600; margin-bottom: 6px; color: var(--text-primary); letter-spacing: -0.02em;">
             A little less to do.
         </div>
-        <div style="color: var(--text-secondary); font-size: 13.5px; max-width: 760px; line-height: 1.6; margin-bottom: 6px;">
+        <div style="color: var(--text-secondary); font-size: 13.5px; line-height: 1.65; margin-bottom: 6px; text-align: justify; text-justify: inter-word;">
             Channel your inner sloth. LazyDesk AI is a calm, local-first productivity assistant that automates the computer chores you keep putting off. Automatically sort messy downloads, extract executive summaries and deadlines with local <strong>Google Gemma 2</strong>, and fingerprint exact duplicates—with 100% air-gapped privacy and zero cloud fees.
         </div>
         """)
