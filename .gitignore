@@ -43,3 +43,9 @@ data/uploads/*
 *.swp
 *.swo
 .DS_Store
+
+# Private & Submission Drafts
+.*submission*
+*SUBMISSION*
+.submission_draft.md
+
