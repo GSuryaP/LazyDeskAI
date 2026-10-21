@@ -12,7 +12,7 @@
 
 ## The "Slow and Steady" Story
 
-International Sloth Day reminds us that rushing through repetitive, mundane computer chores is a waste of mental energy. For most of us, our **Downloads** and **Desktop** folders are digital junk drawers overflowing with unread PDFs, duplicated invoices, untitled screenshots, and scattered spreadsheets.
+Rushing through repetitive, mundane computer chores is a waste of mental energy. For most of us, our **Downloads** and **Desktop** folders are digital junk drawers overflowing with unread PDFs, duplicated invoices, untitled screenshots, and scattered spreadsheets.
 
 **LazyDesk AI** rewards your inner sloth. Instead of spending hours manually sorting files and digging for action items:
 1. One click scans your clutter.
