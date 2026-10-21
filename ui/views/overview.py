@@ -108,12 +108,13 @@ def render_overview_view():
             )
         with scan_col2:
             if st.button("Scan Folder", type="primary", use_container_width=True):
-                if Path(folder_to_scan).is_dir():
+                target_p = Path(folder_to_scan).expanduser().resolve()
+                if target_p.is_dir():
                     with st.spinner("Scanning directory..."):
-                        results = scan_directory(folder_to_scan)
-                        st.session_state["active_folder"] = folder_to_scan
+                        results = scan_directory(str(target_p))
+                        st.session_state["active_folder"] = str(target_p)
                         st.session_state["last_scanned_count"] = len(results)
-                        st.success(f"Scanned {len(results)} files in {Path(folder_to_scan).name}")
+                        st.success(f"Scanned {len(results)} files in {target_p.name}")
                         st.rerun()
                 else:
                     st.error("Directory does not exist or is not accessible.")
@@ -125,8 +126,9 @@ def render_overview_view():
 
     # Compute duplicates count
     duplicate_info = {"total_duplicates": 0, "potential_savings_bytes": 0}
-    if Path(current_scan_dir).is_dir():
-        duplicate_info = find_duplicates(current_scan_dir, recursive=False)
+    current_p = Path(current_scan_dir).expanduser().resolve()
+    if current_p.is_dir():
+        duplicate_info = find_duplicates(str(current_p), recursive=False)
 
     total_summaries = get_total_documents_summarized()
 

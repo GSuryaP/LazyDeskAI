@@ -24,8 +24,9 @@ def render_doc_view():
 
         if sel_mode == "Browse Folder Files":
             candidates = []
-            if Path(active_folder).is_dir():
-                for p in Path(active_folder).rglob("*"):
+            active_p = Path(active_folder).expanduser().resolve()
+            if active_p.is_dir():
+                for p in active_p.rglob("*"):
                     if p.is_file() and p.suffix.lower() in [".md", ".txt", ".pdf", ".csv", ".py", ".sql", ".json"]:
                         candidates.append(str(p))
 

@@ -35,10 +35,11 @@ def render_organizer_view():
             )
         with fc2:
             if st.button("Rescan Folder", type="primary", use_container_width=True):
-                if Path(folder_input).is_dir():
+                target_f = Path(folder_input).expanduser().resolve()
+                if target_f.is_dir():
                     with st.spinner("Scanning directory..."):
-                        scan_directory(folder_input)
-                        st.session_state["active_folder"] = folder_input
+                        scan_directory(str(target_f))
+                        st.session_state["active_folder"] = str(target_f)
                         st.success("Folder scan complete.")
                         st.rerun()
                 else:

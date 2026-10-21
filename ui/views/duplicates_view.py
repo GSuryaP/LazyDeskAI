@@ -27,13 +27,14 @@ def render_duplicates_view():
                 st.session_state["active_folder"] = target_dir
                 st.rerun()
 
-    if not Path(target_dir).is_dir():
+    resolved_target = Path(target_dir).expanduser().resolve()
+    if not resolved_target.is_dir():
         st.error("Specified directory does not exist.")
         return
 
     # 2. Compute duplicates
     with st.spinner("Calculating SHA-256 signatures for exact matches..."):
-        dup_data = find_duplicates(target_dir, recursive=recursive)
+        dup_data = find_duplicates(str(resolved_target), recursive=recursive)
 
     groups = dup_data["groups"]
     total_copies = dup_data["total_duplicates"]
