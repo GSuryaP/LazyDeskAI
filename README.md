@@ -54,7 +54,6 @@ International Sloth Day reminds us that rushing through repetitive, mundane comp
 ## 📸 Project Demo Screenshots
 
 ### 1. Minimalist Front Entrance
-*Clean, centered welcome portal with one-click transition into the main workspace.*
 ![LazyDesk AI Welcome Screen](assets/01_welcome_landing.png)
 
 ### 2. Overview Dashboard
