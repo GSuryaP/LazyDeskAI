@@ -1,4 +1,4 @@
-# 🌿 LazyDesk AI
+# LazyDesk AI
 
 > **Your calm, local-first productivity assistant.**  
 > *Built with open-weight Google Gemma models for the Hacktoberfest 2026 DEV Challenge: Slow and Steady.*
@@ -10,7 +10,7 @@
 
 ---
 
-## 🦥 The "Slow and Steady" Story
+## The "Slow and Steady" Story
 
 International Sloth Day reminds us that rushing through repetitive, mundane computer chores is a waste of mental energy. For most of us, our **Downloads** and **Desktop** folders are digital junk drawers overflowing with unread PDFs, duplicated invoices, untitled screenshots, and scattered spreadsheets.
 
@@ -25,7 +25,7 @@ International Sloth Day reminds us that rushing through repetitive, mundane comp
 
 ---
 
-## ✨ Features
+## Features
 
 - **Warm Editorial Aesthetic**: Built with two bespoke, accessibility-tested themes:
   - **Warm Paper (Light)**: Rich editorial tones (`#F3F0E8` background, `#FAF8F2` cards, `#496B50` forest accent).
@@ -47,11 +47,11 @@ International Sloth Day reminds us that rushing through repetitive, mundane comp
   - Safe archival protocol: Moves duplicates to `_Duplicates_Archive` or quarantine — **never deletes without confirmation**.
 - **Activity History & Physical Disk Undo**:
   - Complete chronological audit log stored in local SQLite (WAL mode).
-  - **Real filesystem undo**: Clicking `↩ Undo Move` physically restores the file from its new destination back to its original path on disk.
+  - **Real filesystem undo**: Clicking `Undo Move` physically restores the file from its new destination back to its original path on disk.
 
 ---
 
-## 📸 Project Demo Screenshots
+## Project Demo Screenshots
 
 ### 1. Minimalist Front Entrance
 ![LazyDesk AI Welcome Screen](assets/01_welcome_landing.png)
@@ -70,7 +70,7 @@ International Sloth Day reminds us that rushing through repetitive, mundane comp
 
 ---
 
-## 🚀 Quickstart Guide
+## Quickstart Guide
 
 ### 1. Prerequisites
 - Python 3.10 or higher
@@ -110,7 +110,7 @@ Open **http://localhost:8501** in your browser.
 
 ---
 
-## 🧪 Running Unit Tests
+## Running Unit Tests
 
 LazyDesk AI includes an automated unit test suite covering SQLite logging, duplicate hashing, file categorization, document extraction, and physical undo:
 
@@ -120,7 +120,7 @@ pytest tests/test_all_core.py -v
 
 ---
 
-## 🛡 Why Open Innovation Matters
+## Why Open Innovation Matters
 
 1. **Absolute Data Privacy (Air-Gapped Operation)**:
    Documents placed on a user's desktop include sensitive tax filings, private contracts, source code, and personal photos. Sending full-text document contents to a proprietary cloud API presents significant compliance and privacy risks. By running **Google Gemma** on-device, LazyDesk AI guarantees that not a single byte of personal data leaves the machine.
@@ -131,6 +131,6 @@ pytest tests/test_all_core.py -v
 
 ---
 
-## 📜 License
+## License
 
 Distributed under the [MIT License](LICENSE).
