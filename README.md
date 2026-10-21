@@ -51,34 +51,23 @@ International Sloth Day reminds us that rushing through repetitive, mundane comp
 
 ---
 
-## 🏛 Architecture
+## 📸 Project Demo Screenshots
 
-```mermaid
-graph TD
-    A[Cluttered Local Folders] --> B[LazyDesk Scanner & Hasher]
-    B --> C[Categorizer & Rules Engine]
-    B --> D[Cryptographic SHA-256 Deduplicator]
-    B --> E[Document Intelligence Pipeline]
-    
-    E --> F[Local Ollama / Google Gemma 2]
-    
-    C --> G[Organization Plan & Collision Checker]
-    G --> H[Interactive Approval & Dry Run UI]
-    H --> I[Safe Filesystem Executor]
-    
-    I --> J[Activity Log & SQLite DB]
-    J --> K[Physical Disk Undo Engine]
-    
-    subgraph UI Presentation Layer
-        L[Streamlit Application]
-        M[Warm Paper / Forest Graphite Design Tokens]
-    end
-    
-    L --- G
-    L --- D
-    L --- E
-    L --- J
-```
+### 1. Minimalist Front Entrance
+*Clean, centered welcome portal with one-click transition into the main workspace.*
+![LazyDesk AI Welcome Screen](assets/01_welcome_landing.png)
+
+### 2. Overview Dashboard
+![LazyDesk AI Overview Dashboard](assets/02_overview_dashboard.png)
+
+### 3. File Organizer & Dry Run Simulation
+![LazyDesk AI File Organizer](assets/03_file_organizer.png)
+
+### 4. Cryptographic Duplicate Detection
+![LazyDesk AI Duplicate Detection](assets/04_duplicate_detection.png)
+
+### 5. Activity History & Physical Disk Undo
+![LazyDesk AI Activity History](assets/05_activity_history.png)
 
 ---
 
